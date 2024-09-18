@@ -1,5 +1,5 @@
 ---
-title: 03 A Web 1.0 Application
+title: 05 Htmx Patterns
 emoji: 🐠
 colorFrom: gray
 colorTo: pink
