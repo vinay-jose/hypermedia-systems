@@ -63,12 +63,12 @@ def contacts_edit_post(contact_id=0):
     else:
         render_template("edit.html", contact=c)
         
-@app.post("/contacts/<contact_id>/delete")
+@app.delete("/contacts/<contact_id>")
 def contacts_delete(contact_id=0):
     contact = Contact.find(contact_id)
     contact.delete()
     flash("Deleted Contact!")
-    return redirect("/contacts")
+    return redirect("/contacts", 303)
         
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port="7860", debug=True)
